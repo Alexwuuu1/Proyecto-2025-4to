@@ -108,10 +108,15 @@ El proyecto estará disponible en http://localhost:8000 (o el puerto que indique
 
 ## Problemas Comunes (Troubleshooting)
 - **Error: 'php' is not recognized as an internal or external command**
-  - PHP no está en el PATH del sistema. Agrega `C:\xampp\php` al PATH de Windows o usa la ruta completa:
-    ```bash
-    "C:\xampp\php\php.exe" artisan serve
-    ```
+  - PHP no está en el PATH del sistema. Agrega `C:\xampp\php` al PATH de Windows o usa la ruta completa.
+    - En cmd:
+      ```cmd
+      "C:\xampp\php\php.exe" artisan serve
+      ```
+    - En PowerShell:
+      ```powershell
+      & "C:\xampp\php\php.exe" artisan serve
+      ```
     Para agregar al PATH: Ve a Configuración > Sistema > Acerca de > Configuración avanzada del sistema > Variables de entorno > Variable Path > Editar > Nuevo > Agrega `C:\xampp\php` > Aceptar.
 
 - **Error de conexión a la base de datos**
