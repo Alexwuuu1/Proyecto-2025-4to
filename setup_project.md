@@ -106,6 +106,27 @@ El proyecto estará disponible en http://localhost:8000 (o el puerto que indique
 - El proyecto usa Tailwind CSS y Laravel Breeze para autenticación.
 - Si hay problemas con la base de datos, verifica que MySQL esté corriendo y las credenciales en .env sean correctas.
 
+## Problemas Comunes (Troubleshooting)
+- **Error: 'php' is not recognized as an internal or external command**
+  - PHP no está en el PATH del sistema. Agrega `C:\xampp\php` al PATH de Windows o usa la ruta completa:
+    ```bash
+    "C:\xampp\php\php.exe" artisan serve
+    ```
+    Para agregar al PATH: Ve a Configuración > Sistema > Acerca de > Configuración avanzada del sistema > Variables de entorno > Variable Path > Editar > Nuevo > Agrega `C:\xampp\php` > Aceptar.
+
+- **Error de conexión a la base de datos**
+  - Asegúrate de que XAMPP tenga Apache y MySQL encendidos.
+  - Verifica las credenciales en `.env`: DB_HOST=127.0.0.1, DB_PORT=3306, DB_DATABASE=voluntariado_db, DB_USERNAME=root, DB_PASSWORD= (vacío por defecto).
+
+- **Error al importar la base de datos**
+  - Si `mysql.exe` no se encuentra, usa la ruta completa: `"C:\xampp\mysql\bin\mysql.exe" -u root -p voluntariado_db < "basedelabase/voluntariado_db (1).sql"`
+
+- **Puerto ocupado**
+  - Si el puerto 8000 está en uso, especifica otro: `php artisan serve --port=8080`
+
+- **Errores de permisos en archivos**
+  - Ejecuta la terminal como administrador o ajusta permisos en la carpeta del proyecto.
+
 ## Script Automatizado (Opcional)
 Si quieres automatizar, crea un archivo `setup.bat` con el siguiente contenido y ejecútalo:
 
