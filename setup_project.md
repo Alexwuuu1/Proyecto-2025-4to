@@ -19,6 +19,18 @@ git clone https://github.com/Alexwuuu1/Proyecto-2025-4to.git
 cd Proyecto-2025-4to
 ```
 
+Por defecto, clona la rama `master`. Si quieres trabajar en desarrollo, cambia a la rama `develop`:
+
+```bash
+git checkout develop
+```
+
+O para la rama de tema UNIFRANZ:
+
+```bash
+git checkout feature/theme-unifranz
+```
+
 ### 2. Instalar Dependencias de PHP (Composer)
 Ejecuta el siguiente comando para instalar las dependencias de Laravel:
 
